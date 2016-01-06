@@ -18,13 +18,26 @@ Example: 19 is a happy number
  */
 public class HappyNumber {
 	
-	public static Boolean isHappy(int n)
+	public static Boolean isHappy2(int n)
 	{
-		HashSet<Integer> set = new HashSet<Integer>(); 
-		if (set.contains(n))
+		if ( n < 0)
 			return false;
-		while ( n !)
 		
+		while (n >= 10)
+		{
+			int sum = 0;
+			while (n != 0)
+			{
+				sum = sum + (n % 10) * (n % 10);
+				n = n / 10;
+			}
+			n = sum;
+		}
+		return n == 1 || n == 7;//only 1 and 7 are happy in [0, 9]
 	}
 
+		public static void main(String[] args)
+		{
+			System.out.println(isHappy2(9));
+		}
 }

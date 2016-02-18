@@ -7,7 +7,7 @@ Could you do it in O(n) time and O(1) space?
  */
 public class PalindromeList {
 	public static Boolean isPalindrome (ListNode head)
-	{//Time O(n), Space O(n)
+	{//Time O(n), Space O(1)
 		ListNode mid = head;
 		ListNode fast = head;
 		if (head == null)

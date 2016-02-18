@@ -9,7 +9,7 @@ You may assume that the array is non-empty and the majority element always exist
 public class MajorityElement {
 	public static int majorityElement(int[] nums)
 	{
-		if (nums.length == 1)
+		/*if (nums.length == 1)
 			return nums[0];
 		Arrays.sort(nums);
 		int max = 1;
@@ -29,7 +29,22 @@ public class MajorityElement {
 				max = 0;
 			}
 		}
-		throw new IllegalArgumentException("No majority elements exists");
+		throw new IllegalArgumentException("No majority elements exists");*/
+		int counter = 0;
+		int target = 0;
+		for(int n : nums)
+		{
+			if(counter == 0)
+			{
+				target = n;
+				counter++;
+			}
+			else if(n == target)
+				counter++;
+			else
+				counter--;
+		}
+		return target;
 	}
 	
 	public static void main(String[] args)

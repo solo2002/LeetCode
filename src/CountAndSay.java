@@ -13,7 +13,7 @@ Note: The sequence of integers will be represented as a string.
  */
 public class CountAndSay {
 	public static String countAndSay(int n)
-	{// 3 case for transform: 1 -> 11; 2 -> 12; 11 -> 21;
+	{
 		if (n <= 0)
 			return "0";
 		String[] result = new String[n + 1];

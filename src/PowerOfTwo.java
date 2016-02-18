@@ -16,6 +16,12 @@ public class PowerOfTwo {
             return false;
         return isPowerOfTwo2(n>>2);
     }
-
+	public static boolean isPowerOfTwo3(int n) {
+		if(n <= 0) return false;
+    double r = Math.log10(n) / Math.log10(2);
+    if(r % 1 == 0)
+        return true;
+    return false;
+}
 
 }

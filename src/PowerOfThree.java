@@ -30,6 +30,16 @@ public class PowerOfThree {
 			 return false;
 		 return isPowerOfThree2(n/3);
 	}
+	public static boolean isPowerOfThree3(int n)
+	{//without loop and recursion
+		if(n <= 0)
+			return false;
+		double r = Math.log10(n) / Math.log10(3);
+		if (r % 1 == 0)
+			return true;
+		return false;
+		
+	}
 	
 	public static void main(String[] args)
 	{

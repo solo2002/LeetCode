@@ -34,11 +34,11 @@ public class StrToInt {
     	if (sign == -1 && sum * (-1) < Integer.MIN_VALUE)
     		return Integer.MIN_VALUE;
     }
-      return (int) sum * sign;
+      return (int) sum * sign;//sum is long type
     	
 }
   public static void main(String[] args)
   {
-  	System.out.print('6' < '0');
+  	System.out.print(null == null);
   }
 }

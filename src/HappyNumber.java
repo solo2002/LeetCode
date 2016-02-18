@@ -28,7 +28,7 @@ public class HappyNumber {
 			int sum = 0;
 			while (n != 0)
 			{
-				sum = sum + (n % 10) * (n % 10);
+				sum = sum + (n % 10) * (n % 10);//() are necessary
 				n = n / 10;
 			}
 			n = sum;
